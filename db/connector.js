@@ -1,10 +1,11 @@
 const mongodb = require("mongodb");
 
-const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie";
+const mongoURI =
+  "mongodb+srv://bms:bms@bmsdeploye.1lhux3l.mongodb.net/?retryWrites=true&w=majority";
 
 let mongoose = require("mongoose");
 const { bookMovieSchema } = require("../models/bookMovie");
-const { UserSchema } = require('../models/user')
+const { UserSchema } = require("../models/user");
 
 mongoose
   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
