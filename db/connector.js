@@ -1,7 +1,7 @@
 const mongodb = require("mongodb");
 
 const mongoURI =
-  "mongodb+srv://bms:bms@bmsdeploye.1lhux3l.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://saadansari:mongodbfa9@bms.mg6hlxg.mongodb.net/?retryWrites=true&w=majority";
 
 let mongoose = require("mongoose");
 const { bookMovieSchema } = require("../models/bookMovie");
