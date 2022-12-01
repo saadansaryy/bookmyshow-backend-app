@@ -16,6 +16,8 @@ app.use(express.json());
 app.use("/api/booking", TicketBooking);
 app.use("/users", userRouter);
 
+app.get("/", () => res.json("bookmyshow Backend App"));
+
 app.listen(port, () =>
   console.log(
     `BookMyShow App backend listening on port http://localhost:${port}`
