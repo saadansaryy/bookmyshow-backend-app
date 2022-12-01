@@ -66,6 +66,7 @@ userRouter.post(
       console.log(error);
       res.status(500).json({
         message: "Something went wrong!",
+        error
       });
     }
   }
@@ -132,6 +133,7 @@ userRouter.post(
       console.log(error);
       res.status(500).json({
         message: "Something went wrong",
+        error
       });
     }
   }
