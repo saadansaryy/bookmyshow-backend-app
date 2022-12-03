@@ -1,100 +1,88 @@
-# movieBooking
-This API Documentation deals with the specifications of endpoints used in the full-stack project named the 'Book that Show' App. It has SIGN UP and SIGN IN API to deal with user authentication. When new users are successfully signed up, they will receive a token which needs to be entered under the Headers section of Postman, whereas the key: auth-key and value: token, to Sign-in. After successfully signing in, the user will be re-directed to Tickets Booking page. It has 2 methods for Movie Ticket Booking: GET and POST. The GET method will fetch the Last Booking details from the database associated with the user and display them under their respective section. The POST method will allow users to book movie tickets and store data in the database. An in-depth understanding of the usage of API endpoints is mentioned below.
+<div id="header" align="center">
+  <img src="https://cdn-icons-png.flaticon.com/128/8841/8841503.png" width="100"/>
+</div>
+<div align="center">
+<h2>Hello ! <h2>
+  <p>Saad Ansari here !</p> 
+</div>
 
-//////////////////////////GET/////////////////////////////////
+<!-- Links to social profiles  -->
+<div id="badges" align="center">
+  <a href="https://www.linkedin.com/in/saad-ansari-117013229/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="#">
+    <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
+  </a>
+  <a href="https://twitter.com/saad_ansare">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  </a>
+</div>
+  
+  ## Getting Started
 
-# GET
+Clone the repository on your local machine with the command below in your terminal, and cd into the **my-app**
 
-The GET method is a HTTP method that is applied while requesting information from a particular source. It is also used to get a specific variable derived from a group.
+<!-- Insert repo link below -->
 
-**API to get information of available tickets at a given position**
+```bash
+https://github.com/saadansaryy/bookmyshow-backend-app.git
 
-**Request method**: `GET`
-
-**Request URI**: `http://localhost:8080/api/booking`
-
-**Auth required** : YES
-
-**Data constraints**
-
-``` json
-{
-    "movie": "[choose a movie name]",
-    "slot": "[choose a time-slot]",
-    "seats":{
-       "A1":[Number of seats],
-       "A2":[Number of seats],
-       "A3":[Number of seats],
-       "A4":[Number of seats],
-       "D1":[Number of seats],
-       "D2":[Number of seats]  
-} 
-}
-
+cd my-app
 ```
 
-**Data example**
+Install dependencies (if you are using yarn then do with that)
 
-``` json
-{
-    "movie": "Tenet",
-    "slot" : "8:00 AM",
-    "seats":{
-       "A1":10,
-       "A2":2  
-} 
-}
-
+```bash
+npm install
 ```
 
-### Success Response
+### `npm run dev`
 
-**Code** : `200 OK`
+Runs the app in the development mode.\
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
-**Content example**
+  <h2>Project Description</h2>
+  <b>Project Name : BookMyShow </b>
+  <a href ="https://bookmyshow-project-frontend.vercel.app"/>
+  Live Here
+  <br></br>
+  </a>
+  <b>Backend Deployment:</b>
+  <a href="https://bookmyshow-project-backend.vercel.app"/>
+  Live here
+  </a>
+  
+  <br>
+ 
+  <br>
+ </br>
 
-``` json
-[
-    {
-        "seats": {
-            "A1": 10,
-            "A2": 2
-        },
-        "_id": "6385dab44f30f232679290b4",
-        "user": "63851043d6018785f2d3ad45",
-        "movie": "Tenet",
-        "slot": "8:00 AM",
-        "__v": 0
-    }
-]
+<b>Languages and Tools used: </b>
 
-```
+ <div>
+  <img src="https://skills.thijs.gg/icons?i=mongodb" title="MongoDB" alt="MongoDB"/>&nbsp;
+  <img src="https://avatars.githubusercontent.com/u/10251060?s=200&v=4" title="Postman" alt="Postman" width="50" height="50"/>&nbsp;
+  <img src="https://skills.thijs.gg/icons?i=nodejs" title="NodeJS" alt="NodeJS" />&nbsp;
+  <img src="https://pngimage.net/wp-content/uploads/2018/05/express-js-png-5.png" title="ExpressJS" alt="ExpressJS" width="50" height="50"/>&nbsp;  
 
-### Error Response
+</div><br>
 
-**Code** : `401 Unauthorized`
+<b>Team Collaborators: </b>
 
-**Content example**
+  <p>➤ Ritu Verma</p>
+  <p>➤ Saad Ansari </p> 
+  <p>➤ Md. Ashif Reza</p>
+  <p>➤ Kaustubh Sule</p>
+ <br>
 
-``` json
-{
-    "error": "Please authenticate using a valid token"
-}
+ # API Documentation
+ 
+ This API Documentation deals with the specifications of endpoints used in the full-stack project named the 'Book that Show' App. It has SIGN UP and SIGN IN API to deal with user authentication. When new users are successfully signed up, they will receive a token which needs to be entered under the Headers section of Postman, whereas the key: auth-key and value: token, to Sign-in. After successfully signing in, the user will be re-directed to Tickets Booking page. It has 2 methods for Movie Ticket Booking: GET and POST. The GET method will fetch the Last Booking details from the database associated with the user and display them under their respective section. The POST method will allow users to book movie tickets and store data in the database. An in-depth understanding of the usage of API endpoints is mentioned below.
 
-```
 
-**Code** : `500 BAD REQUEST`
 
-**Content example**
-
-``` json
-{
-"error": "Internal server error"
-}
-
-```
-
-# SignUp
+## SignUp
 
 Used to provide token to newly registered users.  
 **URL** : `http://localhost:8080/users/signup`  
@@ -167,13 +155,188 @@ Used to provide token to newly registered users.
 ```
 
 
+## SignIn
+
+Get the details of the currently Authenticated User.  
+.  
+**URL** : [**http://localhost:8080/users/signin**](http://localhost:8080/users/signin)
+
+**Method** : `POST`
+
+**Auth required** : `NO`
+
+**Data constraints**
+
+``` json
+{
+    "email"   : "[valid email id]", 
+    "password": "[password ]"
+}
+
+```
+
+**Data example**
+
+``` json
+{
+    "email"   : "almabetter123@gmail.com", 
+    "password": "ab123"
+}
+
+```
+
+### Success Response
+
+**Code** : `201 OK`
+
+**Content example**
+
+``` json
+{
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2Mzg1ZTA5NjRmMzBmMjMyNjc5MjkwYjgiLCJpYXQiOjE2Njk3MTg1OTR9.hiyB2hwf7pULT3a23o_ZV_KTOdlbSdh4F8neBfleybk"
+}
+
+```
+
+### Error Response
+
+**Code** : `404 BAD REQUEST`
+
+**Condition** : **If 'user with entered email' not found**
+
+**Content** :
+
+``` json
+{
+    "success": false,
+    "message": "User not found"
+}
+
+```
+
+**Condition** : **If 'user' enters wrong password**
+
+**Content** :
+
+``` json
+{
+    "success": false,
+    "message": "Invalid Credentials"
+}
+
+```
+
+**Code** :`500`
+
+**Content** :
+
+``` json
+{
+    "error": [
+        "Internal Server Error"
+    ]
+}
+
+```
 
 
 
-//////////////////////////////POST////////////////////////////
+
+## GET
+
+The GET method is a HTTP method that is applied while requesting information from a particular source. It is also used to get a specific variable derived from a group.
+
+**API to get information of available tickets at a given position**
+
+**Request method**: `GET`
+
+**Request URI**: `http://localhost:8080/api/booking`
+
+**Auth required** : YES
+
+**Data constraints**
+
+``` json
+{
+    "movie": "[choose a movie name]",
+    "slot": "[choose a time-slot]",
+    "seats":{
+       "A1":"[Number of seats]",
+       "A2":"[Number of seats]",
+       "A3":"[Number of seats]",
+       "A4":"[Number of seats]",
+       "D1":"[Number of seats]",
+       "D2":"[Number of seats]"  
+} 
+}
+
+```
+
+**Data example**
+
+``` json
+{
+    "movie": "Tenet",
+    "slot" : "8:00 AM",
+    "seats":{
+       "A1":10,
+       "A2":2  
+} 
+}
+
+```
+
+### Success Response
+
+**Code** : `200 OK`
+
+**Content example**
+
+``` json
+[
+    {
+        "seats": {
+            "A1": 10,
+            "A2": 2
+        },
+        "_id": "6385dab44f30f232679290b4",
+        "user": "63851043d6018785f2d3ad45",
+        "movie": "Tenet",
+        "slot": "8:00 AM",
+        "__v": 0
+    }
+]
+
+```
+
+### Error Response
+
+**Code** : `401 Unauthorized`
+
+**Content example**
+
+``` json
+{
+    "error": "Please authenticate using a valid token"
+}
+
+```
+
+**Code** : `500 BAD REQUEST`
+
+**Content example**
+
+``` json
+{
+"error": "Internal server error"
+}
+
+```
 
 
-# POST
+
+## POST
 
 POST is an HTTP method designed to send data to the server from an HTTP client. It requests the web server accept the data enclosed in the body of the POST message.
 
@@ -192,12 +355,12 @@ POST is an HTTP method designed to send data to the server from an HTTP client. 
     "movie": "[choose a movie name]",
     "slot": "[choose a time-slot]",
     "seats":{
-       "A1":[Number of seats],
-       "A2":[Number of seats],
-       "A3":[Number of seats],
-       "A4":[Number of seats],
-       "D1":[Number of seats],
-       "D2":[Number of seats]  
+       "A1":"[Number of seats]",
+       "A2":"[Number of seats]",
+       "A3":"[Number of seats]",
+       "A4":"[Number of seats]",
+       "D1":"[Number of seats]",
+       "D2":"[Number of seats]"  
 } 
 }
 
@@ -308,266 +471,6 @@ POST is an HTTP method designed to send data to the server from an HTTP client. 
 }
 
 ```
-
-
-
-# SignUp
-
-Used to provide token to newly registered users.  
-**URL** : [**http://localhost:8080/users/signup**](http://localhost:8080/users/signup)
-
-**Method** : `POST`
-
-**Auth required** : `NO`
-
-**Data constraints**
-
-``` json
-{
-    "username": "[valid username]",
-    "email"   : "[valid email id]", 
-    "password": "[password of minimum 5 and maximum 10 characters]"
-}
-
-```
-
-**Data example**
-
-``` json
-{
-     "username": "AlmaBetter",
-    "email"   : "almabetter123@gmail.com", 
-    "password": "ab123"
-}
-
-```
-
-### Success Response
-
-**Code** : `201 OK`
-
-**Content example**
-
-``` json
-{
-    "success": true,
-    "token": 
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2Mzg1ZTA5NjRmMzBmMjMyNjc5MjkwYjgiLCJpYXQiOjE2Njk3MTgxNjZ9.zCrpcwDRmVVENOL5UgY6WQdQeRILd4u3aY6n8kR1B9k"
-}
-
-```
-
-### Error Response
-
-**Condition** : **If 'user with an email' already exists.**
-
-**Code** : `403 Forbidden`
-
-**Content** :
-
-``` json
-{
-    "success": false,
-    "message": "Sorry a user with this email already exists"
-}
-
-```
-
-**Code** :`500`
-
-**Content** :
-
-``` json
-{
-    "errors": [
-        "Internal Server Error"
-    ]
-}
-
-```
-
-
-
-
-
-
-
-/////////////////////SIGN UP/////////////////////////
-
-# SignUp
-
-Used to provide token to newly registered users.  
-**URL** : [**http://localhost:8080/users/signup**](http://localhost:8080/users/signup)
-
-**Method** : `POST`
-
-**Auth required** : `NO`
-
-**Data constraints**
-
-``` json
-{
-    "username": "[valid username]",
-    "email"   : "[valid email id]", 
-    "password": "[password of minimum 5 and maximum 10 characters]"
-}
-
-```
-
-**Data example**
-
-``` json
-{
-     "username": "AlmaBetter",
-    "email"   : "almabetter123@gmail.com", 
-    "password": "ab123"
-}
-
-```
-
-### Success Response
-
-**Code** : `201 OK`
-
-**Content example**
-
-``` json
-{
-    "success": true,
-    "token": 
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2Mzg1ZTA5NjRmMzBmMjMyNjc5MjkwYjgiLCJpYXQiOjE2Njk3MTgxNjZ9.zCrpcwDRmVVENOL5UgY6WQdQeRILd4u3aY6n8kR1B9k"
-}
-
-```
-
-### Error Response
-
-**Condition** : **If 'user with an email' already exists.**
-
-**Code** : `403 Forbidden`
-
-**Content** :
-
-``` json
-{
-    "success": false,
-    "message": "Sorry a user with this email already exists"
-}
-
-```
-
-**Code** :`500`
-
-**Content** :
-
-``` json
-{
-    "errors": [
-        "Internal Server Error"
-    ]
-}
-
-```
-
-
-
-
-
-
-
-
-////////////////////////////////SIGN In//////////////////////////
-
-
-
-# SignIn
-
-Get the details of the currently Authenticated User.  
-.  
-**URL** : [**http://localhost:8080/users/signin**](http://localhost:8080/users/signin)
-
-**Method** : `POST`
-
-**Auth required** : `NO`
-
-**Data constraints**
-
-``` json
-{
-    "email"   : "[valid email id]", 
-    "password": "[password ]"
-}
-
-```
-
-**Data example**
-
-``` json
-{
-    "email"   : "almabetter123@gmail.com", 
-    "password": "ab123"
-}
-
-```
-
-### Success Response
-
-**Code** : `201 OK`
-
-**Content example**
-
-``` json
-{
-    "success": true,
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2Mzg1ZTA5NjRmMzBmMjMyNjc5MjkwYjgiLCJpYXQiOjE2Njk3MTg1OTR9.hiyB2hwf7pULT3a23o_ZV_KTOdlbSdh4F8neBfleybk"
-}
-
-```
-
-### Error Response
-
-**Code** : `404 BAD REQUEST`
-
-**Condition** : **If 'user with entered email' not found**
-
-**Content** :
-
-``` json
-{
-    "success": false,
-    "message": "User not found"
-}
-
-```
-
-**Condition** : **If 'user' enters wrong password**
-
-**Content** :
-
-``` json
-{
-    "success": false,
-    "message": "Invalid Credentials"
-}
-
-```
-
-**Code** :`500`
-
-**Content** :
-
-``` json
-{
-    "error": [
-        "Internal Server Error"
-    ]
-}
-
-```
-
-
-
-
 
 
 
