@@ -123,7 +123,7 @@ Used to provide token to newly registered users.
 {
     "success": true,
     "token": 
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2Mzg1ZTA5NjRmMzBmMjMyNjc5MjkwYjgiLCJpYXQiOjE2Njk3MTgxNjZ9.zCrpcwDRmVVENOL5UgY6WQdQeRILd4u3aY6n8kR1B9k"
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2MzhiNjAzY2U1MjZkZGVkYWNiOThkOTkiLCJpYXQiOjE2NzAwNzg3NjN9.DBmn9QYLJjWfUTsciU484lZYi1Nv_8PUvY7aBWFcD18"
 }
 
 ```
@@ -197,7 +197,7 @@ Get the details of the currently Authenticated User.
 ``` json
 {
     "success": true,
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2Mzg1ZTA5NjRmMzBmMjMyNjc5MjkwYjgiLCJpYXQiOjE2Njk3MTg1OTR9.hiyB2hwf7pULT3a23o_ZV_KTOdlbSdh4F8neBfleybk"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFiZXR0ZXIxMjNAZ21haWwuY29tIiwiaWQiOiI2MzhiNjAzY2U1MjZkZGVkYWNiOThkOTkiLCJpYXQiOjE2NzAwNzg3NjN9.DBmn9QYLJjWfUTsciU484lZYi1Nv_8PUvY7aBWFcD18"
 }
 
 ```
