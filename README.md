@@ -73,8 +73,8 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
 <b>Team Collaborators: </b>
 
-  <p>➤ Ritu Verma</p>
   <p>➤ Saad Ansari </p> 
+  <p>➤ Ritu Verma</p>
   <p>➤ Md. Ashif Reza</p>
   <p>➤ Kaustubh Sule</p>
  <br>
