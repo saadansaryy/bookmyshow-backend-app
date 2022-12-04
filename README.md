@@ -51,7 +51,10 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
   <b>Backend Deployment:</b>
   <a href="https://bookmyshow-project-backend.vercel.app"/>
   Live here
+  <br></br>
   </a>
+  <b>Configure Database:</b>
+  <span>Open MongoDB Compass and use Mongo_URI given below (Mongo_URI="mongodb+srv://bms:bms123@bookmyshowDB.1bw2pfo.mongodb.net/bookMovie?retryWrites=true&w=majority")</span>
   
   <br>
  
