@@ -1,7 +1,8 @@
 const mongodb = require("mongodb");
 
-const mongoURI =
-  "mongodb+srv://saadansari:mongodbfa9@bms.mg6hlxg.mongodb.net/bookmyshow?retryWrites=true&w=majority";
+// const mongoURI = "mongodb://0.0.0.0:27017/" + "bookMovie"; // for local DB
+// atlas MongoDb::: cloud Database
+const mongoURI ="mongodb+srv://bms:bms123@bookmyshowDB.1bw2pfo.mongodb.net/bookMovie?retryWrites=true&w=majority";
 
 let mongoose = require("mongoose");
 const { bookMovieSchema } = require("../models/bookMovie");
